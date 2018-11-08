@@ -1,3 +1,4 @@
+// filterDuplicateMakes.cpp
 // Author: Joshua Cancellier
 // Date: November 7, 2018
 // Purpose: Filter out duplicate entries for maker.sql file
@@ -11,7 +12,6 @@
 #define OUTPUT_FILE "maker-new.sql"
 
 using namespace std;
-
 
 void findAll(ifstream &, vector<string>&);
 void extractMakerModel(string, string &);
@@ -100,9 +100,7 @@ void findDuplicates(const vector<string> makersAndModels, map<string, vector<int
     for (auto& kv : duplicates) {
         remove_duplicate(kv.second);
         kv.second.pop_back();
-        // cout << endl;
     }
-    // sort(duplicates.begin(), duplicates.end());
 }
 
 void findAll(ifstream &fin, vector<string> &makersAndModels) {
@@ -110,7 +108,6 @@ void findAll(ifstream &fin, vector<string> &makersAndModels) {
     string makerAndModel;
     while(getline(fin, input)) {
         extractMakerModel(input, makerAndModel);
-        // cout << makerAndModel << endl;
         makersAndModels.push_back(makerAndModel);
     }
 }

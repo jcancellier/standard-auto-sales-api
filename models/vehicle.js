@@ -2,6 +2,7 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Vehicle = sequelize.define('vehicle', {
+    maker_code: DataTypes.INTEGER,
     year: DataTypes.INTEGER,
     color: DataTypes.STRING,
     vin: DataTypes.STRING(17),
