@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     color: DataTypes.STRING,
     vin: DataTypes.STRING(17),
     // TODO: ask kuljit about float(2)
-    invoice_price: DataTypes.FLOAT(2),
+    invoice_price: DataTypes.INTEGER,
     odo_reading: DataTypes.INTEGER,
     date_received: DataTypes.DATEONLY
   });
