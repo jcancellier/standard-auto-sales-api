@@ -12,5 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     date_received: DataTypes.DATEONLY
   });
 
+  Vehicle.associate = function(models) {
+    Vehicle.belongsTo(models.maker, {
+      foreignKey: 'maker_code'
+    })
+}
+
   return Vehicle;
 };
