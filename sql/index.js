@@ -1,3 +1,7 @@
 var fs = require('fs');
-var sql = fs.readFileSync(__dirname + '/mockData/maker.sql').toString();
+var maker = fs.readFileSync(__dirname + '/mockData/maker.sql').toString();
+var vehicle = fs.readFileSync(__dirname + '/mockData/vehicle.sql').toString();
+
+var sql = maker + vehicle;
+
 module.exports = sql;

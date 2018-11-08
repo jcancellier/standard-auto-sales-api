@@ -2,7 +2,7 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Vehicle = sequelize.define('vehicle', {
-    year: DataTypes.DATE,
+    year: DataTypes.INTEGER,
     color: DataTypes.STRING,
     vin: DataTypes.STRING(17),
     // TODO: ask kuljit about float(2)
