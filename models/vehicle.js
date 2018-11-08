@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     // TODO: ask kuljit about float(2)
     invoice_price: DataTypes.FLOAT(2),
     odo_reading: DataTypes.INTEGER,
-    date_received: DataTypes.DATE
+    date_received: DataTypes.DATEONLY
   });
 
   return Vehicle;
