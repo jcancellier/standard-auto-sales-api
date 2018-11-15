@@ -33,7 +33,7 @@ models.sequelize.sync({force: true}).then(function () {
   server.on('listening', onListening);
 
   // Load mock data
-  models.sequelize.query(sqlMockData)
+  // models.sequelize.query(sqlMockData)
 });
 
 /**
