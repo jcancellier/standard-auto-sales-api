@@ -14,5 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     saleslicense_id: DataTypes.STRING
   });
 
+  SalesPerson.associate = function (models) {
+    SalesPerson.hasMany(models.sale, {
+      foreignKey: 'salesperson_id'
+    })
+  }
+
   return SalesPerson;
 };

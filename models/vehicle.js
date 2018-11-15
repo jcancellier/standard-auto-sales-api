@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
     Vehicle.belongsTo(models.maker, {
       foreignKey: 'maker_code'
     })
+    Vehicle.hasMany(models.sale, {
+      foreignKey: 'vehicle_id'
+    })
   }
 
   return Vehicle;

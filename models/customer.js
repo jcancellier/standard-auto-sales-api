@@ -15,5 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     zipcode: DataTypes.STRING(5)
   });
 
+  Customer.associate = function (models) {
+    Customer.hasMany(models.sale, {
+      foreignKey: 'customer_id'
+    })
+  }
+
   return Customer;
 };
