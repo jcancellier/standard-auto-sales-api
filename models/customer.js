@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   var Customer = sequelize.define('customer', {
     first_name: { type: DataTypes.STRING, allowNull: false },
     last_name: { type: DataTypes.STRING, allowNull:false },
-    drivers_license: DataTypes.STRING(32),
+    drivers_license: { type: DataTypes.STRING(32), allowNull: true, unique: true},
     dob: {type: DataTypes.DATEONLY, allowNull:false},
     issue_date: DataTypes.DATEONLY,
     expiration_date: DataTypes.DATEONLY,

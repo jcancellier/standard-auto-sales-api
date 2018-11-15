@@ -4,11 +4,13 @@ module.exports = (sequelize, DataTypes) => {
   var SalesLicense = sequelize.define('saleslicense', {
     id: {
       type: DataTypes.STRING,
-      primaryKey: true
+      primaryKey: true,
+      unique: true
     },
     state_of_issue: {
       type: DataTypes.STRING,
-      primaryKey: true
+      primaryKey: true,
+      allowNull: false
     },
     issue_date: {
       type: DataTypes.DATEONLY,
