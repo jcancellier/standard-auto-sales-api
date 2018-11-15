@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "postgres",
-    "password": null,
+    "username": "vkmeyuzj",
+    "password": "ulD4QqkFoUW391BQhWgadX_skC6uP5yY",
     "database": "standard_auto_sales",
-    "host": "127.0.0.1",
+    "host": "baasu.db.elephantsql.com",
     "dialect": "postgres"
   },
   "test": {
-    "username": "postgres",
-    "password": null,
+    "username": "vkmeyuzj",
+    "password": "ulD4QqkFoUW391BQhWgadX_skC6uP5yY",
     "database": "standard_auto_sales",
-    "host": "127.0.0.1",
+    "host": "baasu.db.elephantsql.com",
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": null,
+    "username": "vkmeyuzj",
+    "password": "ulD4QqkFoUW391BQhWgadX_skC6uP5yY",
     "database": "standard_auto_sales",
-    "host": "127.0.0.1",
+    "host": "baasu.db.elephantsql.com",
     "dialect": "postgres"
   }
 }

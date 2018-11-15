@@ -5,16 +5,16 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
       autoIncrement: true,
       primaryKey: true
     },
+    customer_id: DataTypes.INTEGER,
+    salesperson_id: DataTypes.INTEGER,
     date: DataTypes.DATEONLY
   });
 
   Visit.associate = function (models) {
-    Visit.belongsToMany(models.vehicle, {
-      through: 'testdrive',
+    Visit.hasMany(models.testdrive, {
       foreignKey: 'visit_id'
     })
   }

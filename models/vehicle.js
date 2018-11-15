@@ -2,14 +2,14 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Vehicle = sequelize.define('vehicle', {
-    maker_code: DataTypes.INTEGER,
-    year: DataTypes.INTEGER,
-    color: DataTypes.STRING,
-    vin: DataTypes.STRING(17),
+    maker_code: {type: DataTypes.INTEGER, allowNull:false} ,
+    year: {type: DataTypes.INTEGER, allowNull:false},
+    color: {type: DataTypes.STRING, allowNull:false},
+    vin: {type:DataTypes.STRING(17), allowNull:false, unique:true},
     // TODO: ask kuljit about float(2)
-    invoice_price: DataTypes.INTEGER,
-    odo_reading: DataTypes.INTEGER,
-    date_received: DataTypes.DATEONLY
+    invoice_price: {type:DataTypes.INTEGER, allowNull:false},
+    odo_reading: {type: DataTypes.INTEGER, allowNull:false},
+    date_received: {type: DataTypes.DATEONLY, allowNull:false}
   });
 
   Vehicle.associate = function (models) {
@@ -19,8 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     Vehicle.hasMany(models.sale, {
       foreignKey: 'vehicle_id'
     })
-    Vehicle.belongsToMany(models.visit, {
-      through: 'testdrive',
+    Vehicle.hasMany(models.testdrive, {
       foreignKey: 'vehicle_id'
     })
   }

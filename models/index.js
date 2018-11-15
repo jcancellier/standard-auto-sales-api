@@ -16,13 +16,13 @@ const sequelizeConfig = {
     timestamps: false
   }
 }
-
-let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], sequelizeConfig);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, sequelizeConfig);
-}
+let sequelize = new Sequelize('postgres://vkmeyuzj:ulD4QqkFoUW391BQhWgadX_skC6uP5yY@baasu.db.elephantsql.com:5432/vkmeyuzj', sequelizeConfig);
+// let sequelize;
+// if (config.use_env_variable) {
+//   sequelize = new Sequelize(process.env[config.use_env_variable], sequelizeConfig);
+// } else {
+//   sequelize = new Sequelize(config.database, config.username, config.password, sequelizeConfig);
+// }
 
 fs
   .readdirSync(__dirname)

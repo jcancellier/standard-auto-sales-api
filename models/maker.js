@@ -10,11 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     make: {
         type: DataTypes.STRING,
-        unique: 'MakeAndModel'
+        unique: 'MakeAndModel',
+        allowNull:false
     },
     model: {
         type: DataTypes.STRING,
-        unique: 'MakeAndModel'
+        unique: 'MakeAndModel',
+        allowNull:false
     }
   });
 
