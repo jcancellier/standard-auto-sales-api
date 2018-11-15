@@ -13,7 +13,10 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Visit.associate = function (models) {
-
+    Visit.belongsToMany(models.vehicle, {
+      through: 'testdrive',
+      foreignKey: 'visit_id'
+    })
   }
 
   return Visit;

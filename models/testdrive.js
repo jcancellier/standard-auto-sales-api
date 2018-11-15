@@ -2,11 +2,14 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Testdrive = sequelize.define('testdrive', {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: true,
+      autoIncrement: true,
+      primaryKey: true
+    }
   });
-
-  Testdrive.associate = function (models) {
-      
-  }
 
   return Testdrive;
 };
