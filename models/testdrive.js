@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
-    vehicle_id: DataTypes.INTEGER,
-    visit_id: DataTypes.INTEGER
+    vehicle_id: {type: DataTypes.INTEGER, allowNull: false},
+    visit_id: {type: DataTypes.INTEGER, allowNull:false}
   });
 
   return Testdrive;

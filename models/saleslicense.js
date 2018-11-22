@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     issue_date: {
       type: DataTypes.DATEONLY,
-      primaryKey: true
+      primaryKey: true,
+      allowNull:false
     },
-    expiration_date: DataTypes.DATEONLY,
+    expiration_date: {type: DataTypes.DATEONLY, allowNull: false},
   });
 
 

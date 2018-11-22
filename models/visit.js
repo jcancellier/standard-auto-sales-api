@@ -8,9 +8,9 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
-    customer_id: DataTypes.INTEGER,
-    salesperson_id: DataTypes.INTEGER,
-    date: DataTypes.DATEONLY
+    customer_id: {type: DataTypes.INTEGER, allowNull: false},
+    salesperson_id: {type: DataTypes.INTEGER, allowNull: false},
+    date: {type: DataTypes.DATEONLY, allowNull:false}
   });
 
   Visit.associate = function (models) {
