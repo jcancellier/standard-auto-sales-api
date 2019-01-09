@@ -21,6 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// Controllers
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/vehicles', vehiclesRouter);
