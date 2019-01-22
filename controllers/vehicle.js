@@ -6,8 +6,9 @@ findAll = (req, res) => {
     return (
         Vehicle.findAll({
             include: [{
-                model: Maker,
-                attributes: ['make', 'model']
+                all: true,
+                // model: Maker,
+                // attributes: ['make', 'model']
             }],
             limit: count
         })

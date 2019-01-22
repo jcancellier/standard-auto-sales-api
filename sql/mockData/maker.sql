@@ -1,15 +1,16 @@
 
-INSERT INTO "maker" VALUES
-    (0,'Honda','Accord'),
-    (1,'Toyota','Camry'),
-    (2,'Toyota','Tacoma'),
-    (3,'Toyota','Sienna'),
-    (4,'Toyota','Tundra'),
-    (5,'Toyota','Prius'),
-    (6,'Lexus','IS 350'),
-    (7,'Lexus','CT 200h'),
-    (8,'Lexus','RC 300'),
-    (9,'Lexus','RX RX 450h');
+INSERT INTO "maker"
+VALUES
+    (0, 'Honda', 'Accord', 'https://www.gannett-cdn.com/-mm-/9fb2a5047d1eca91be101d9b1d4ec4c5be273723/c=0-26-3000-1721/local/-/media/2018/03/16/DetroitFreeP/DetroitFreePress/636568049959230817-2018-Honda-Accord-Touring-2.0T-031.jpg?width=3200&height=1680&fit=crop'),
+    (1, 'Toyota', 'Camry', 'https://cdn.autoportal.com/img/news/13959/main/30080f2fbef5b122806f310028004952/main_cropped.jpg'),
+    (2, 'Toyota', 'Tacoma', 'http://www.theautohost.com/_contentPages/vehicleContentPages/toyota/2019/Tacoma/images/header.jpg'),
+    (3, 'Toyota', 'Sienna', 'https://pictures.topspeed.com/IMG/jpg/201703/toyota-sienna.jpg'),
+    (4, 'Toyota', 'Tundra', 'https://bestcarrumorsnews.com/wp-content/uploads/2018/05/2019-toyota-tundra-tail-light-high-resolution.jpg'),
+    (5, 'Toyota', 'Prius', 'https://www.autocar.co.nz/_Reviews/Cars/Toyota-Prius-Prime/Toyota-Prius-Prime-static-dps_HEADER.jpg'),
+    (6, 'Lexus', 'IS 350', 'https://st.motortrend.com/uploads/sites/10/2015/09/2015-Lexus-IS-350-F-Sport-drivers-side.jpg'),
+    (7, 'Lexus', 'CT 200h', 'https://pictures.topspeed.com/IMG/jpg/201502/2015-lexus-ct-200h---driv-2.jpg'),
+    (8, 'Lexus', 'RC 300', 'https://st.motortrend.ca/uploads/sites/10/2015/09/2015-Lexus-RC-350-F-Sport-front-three-quarter-view.jpg'),
+    (9, 'Lexus', 'RX 450h', 'https://assets.pcmag.com/media/images/438362-lexus-rx450h-main.jpg?width=1200&height=800');
 
 -- insert into maker (make, model) values ('Audi', 'R8');
 -- insert into maker (make, model) values ('Suzuki', 'SX4');
