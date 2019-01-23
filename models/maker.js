@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         unique: 'MakeAndModel',
         allowNull:false
+    },
+    image: {
+        type: DataTypes.STRING
     }
   });
 

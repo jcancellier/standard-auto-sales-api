@@ -1,18 +1,15 @@
-const Vehicle = require('../models').vehicle;
-const Maker = require('../models').maker;
+const Salesperson = require('../models').salesperson;
 
 findAll = (req, res) => {
     const { count = 100 } = req.query;
     return (
-        Vehicle.findAll({
+        Salesperson.findAll({
             include: [{
-                all: true,
-                // model: Maker,
-                // attributes: ['make', 'model']
+              all: true
             }],
             limit: count
         })
-            .then((vehicles) => {res.status(200).send(vehicles)})
+            .then((salespersons) => {res.status(200).send(salespersons)})
             .catch((err) => res.status(400).send(err))
     );
 }
@@ -20,18 +17,18 @@ findAll = (req, res) => {
 findById = (req, res) => {
     const { id } = req.params;
     return (
-        Vehicle.findById(id, {
+        Salesperson.findById(id, {
             include: [{
                 all: true
             }]
         })
-            .then(vehicle => {
-                if(!vehicle) {
+            .then(salesperson => {
+                if(!salesperson) {
                     return res.status(404).send({
-                        message: 'Vehicle Not Found',
+                        message: 'Salesperson Not Found',
                       });
                 }
-                return res.status(200).send(vehicle);
+                return res.status(200).send(salesperson);
             })
     );
 }
