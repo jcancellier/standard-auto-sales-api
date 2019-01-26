@@ -6,7 +6,7 @@ $input = 'visit.sql';
 $colNum = 3;
 #give date change in english 
 #e.g. "+1 month", "-4 month", "+24 day", etc.
-$dateChange = "+4 month";
+$dateChange = "now";
 
 
 #function that returns an array populated with everything
@@ -26,11 +26,12 @@ $file = file_get_contents($input);
 
 $header = substr($file,0,strpos($file,'('));
 // echo $header;
-fwrite($output, $header);
+$outputString = "";
+$outputString.= $header;
 
 $insertValues = tag_contents($file,'(', ')');
 foreach($insertValues as $row) {
-    fwrite($output, '(');
+    $outputString.= '(';
     $columns = str_getcsv($row);
     $prevDate = trim($columns[$colNum],"'");
     $newDate = date("Y-m-d H:i:s", strtotime($dateChange, strtotime($prevDate)));
@@ -38,10 +39,14 @@ foreach($insertValues as $row) {
     $columns[$colNum] = "'".$newDate."'";
     $newRow = implode(",", $columns);
     // echo $newRow;
-    fwrite($output, $newRow);
-    fwrite($output, ")\n\t");   
+    $outputString.= $newRow;
+    $outputString.= "),\n\t";   
 }
 
+$outputString = substr($outputString,0,-3);
+// echo $outputString;
+$outputString.=";";
+fwrite($output, $outputString);
 fclose($output);
 
 ?>
