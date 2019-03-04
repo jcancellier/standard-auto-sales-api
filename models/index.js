@@ -14,7 +14,8 @@ const sequelizeConfig = {
   define: {
     freezeTableName: true,
     timestamps: false
-  }
+  },
+  logging: false
 }
 let sequelize = new Sequelize('postgres://vkmeyuzj:ulD4QqkFoUW391BQhWgadX_skC6uP5yY@baasu.db.elephantsql.com:5432/vkmeyuzj', sequelizeConfig);
 // let sequelize;
