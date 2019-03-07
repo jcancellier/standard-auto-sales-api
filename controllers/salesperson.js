@@ -5,11 +5,11 @@ findAll = (req, res) => {
     return (
         Salesperson.findAll({
             include: [{
-              all: true
+                all: true
             }],
             limit: count
         })
-            .then((salespersons) => {res.status(200).send(salespersons)})
+            .then((salespersons) => { res.status(200).send(salespersons) })
             .catch((err) => res.status(400).send(err))
     );
 }
@@ -23,10 +23,10 @@ findById = (req, res) => {
             }]
         })
             .then(salesperson => {
-                if(!salesperson) {
+                if (!salesperson) {
                     return res.status(404).send({
                         message: 'Salesperson Not Found',
-                      });
+                    });
                 }
                 return res.status(200).send(salesperson);
             })

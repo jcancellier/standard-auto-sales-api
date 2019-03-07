@@ -1,5 +1,5 @@
 INSERT INTO "customer" VALUES
-    (default,'Michael','Jordan','1fe946','1983-08-23 00:00:00','2011-01-04 00:00:00','2019-06-12 00:00:00','f','47 Dapin Point','Des Moines','IA',50310),
+    (default,'Michael','Jordan','1fe946','1983-08-23 00:00:00','2011-01-04 00:00:00','2019-06-12 00:00:00','m','47 Dapin Point','Des Moines','IA',50310),
     (default,'Sonya','Roubottom','a88e2d','1979-09-21 00:00:00','2013-05-02 00:00:00','2023-09-08 00:00:00','m','461 Waubesa Road','Tulsa','OK',74108),
     (default,'Izabel','Kmicicki','b69807','1979-12-05 00:00:00','2018-06-23 00:00:00','2022-03-25 00:00:00','m','15408 Arkansas Terrace','Austin','TX',78744),
     (default,'Reider','Joselevitz','a8532e','1992-10-13 00:00:00','2013-10-17 00:00:00','2020-05-12 00:00:00','f','11091 Dovetail Trail','Orange','CA',92862),
