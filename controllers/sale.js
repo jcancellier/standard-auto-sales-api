@@ -16,6 +16,28 @@ add = (req, res) => {
     .catch((error) => res.status(400).send(error));
 }
 
+findAll = (req, res) => {
+  const { salesperson_id } = req.query;
+  let query;
+
+  if(salesperson_id) {
+    query = {
+      where: {
+        salesperson_id: salesperson_id
+      }
+    };
+  } else {
+    query = {};
+  }
+
+  Sale.findAll({
+    query
+  })
+    .then((sales) => res.status(200).send(sales))
+    .catch((err) => res.status(400).send(err));
+}
+
 module.exports = {
-  add
+  add,
+  findAll
 }
