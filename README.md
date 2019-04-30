@@ -3,9 +3,9 @@ Restful API interfacing with PostgreSQL database for my [Standard Auto Sales Mob
 
 ## Built With
 
-* [NodeJS](https://node.js.org) - Javascript Runtime
-* Express
-* Sequelize
+* [NodeJS](https://nodejs.org) - Javascript Runtime
+* [Express](https://expressjs.com) - NodeJS Web Application Framework
+* [Sequelize](https://docs.sequelizejs.com) - NodeJS ORM for SQL DBMS
 
 ## Authors
 
